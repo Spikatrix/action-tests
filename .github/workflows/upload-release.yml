@@ -17,7 +17,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: .github/workflows/main.yml
-        tag: test-release
+        tag: test
         overwrite: true
         prerelease: true
         target_commit: something-that-does-not-exist
