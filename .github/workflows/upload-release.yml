@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Checkout dev branch
       uses: actions/checkout@v2
-        
+
     - name: Upload test release
       uses: Spikatrix/upload-release-action@master
       with:
