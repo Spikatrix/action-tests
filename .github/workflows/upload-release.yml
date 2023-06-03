@@ -1,21 +1,25 @@
-name: Test ssh
+name: Test upload-release-action
 
 on:
-  push:
-    branches: master
-
   workflow_dispatch:
 
 jobs:
-  ssh-to-remote:
+  # Workflows
+  test_release_action:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hello There
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: touch hellothere
+    - name: Checkout dev branch
+      uses: actions/checkout@v2
+        
+    - name: Upload test release
+      uses: Spikatrix/upload-release-action@master
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: .github/workflows/main.yml
+        tag: test-release
+        overwrite: true
+        prerelease: true
+        target_commit: something-that-does-not-exist
+        release_name: "Test build"
+        body: "Test body"
