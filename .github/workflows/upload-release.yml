@@ -20,6 +20,6 @@ jobs:
         tag: test
         overwrite: true
         prerelease: true
-        target_commit: something-that-does-not-exist
+        target_commit: 9487bf5b1c87ba3d9d
         release_name: "Test build"
         body: "Test body"
