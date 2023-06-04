@@ -17,9 +17,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: .github/workflows/main.yml
-        tag: test
-        overwrite: true
-        prerelease: true
+        tag: vtest
         target_commit: 9487bf5b1c87ba3d9d
         release_name: "Test build"
         body: "Test body"
