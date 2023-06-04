@@ -18,5 +18,6 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: .github/workflows/main.yml
         tag: test
+        target_commit: "9487bf5b1c87ba3d9d2ca876bcc7636affe86adc"
         release_name: "Test build"
         body: "Test body"
