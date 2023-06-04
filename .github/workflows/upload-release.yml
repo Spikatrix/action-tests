@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Upload test release
-      uses: Spikatrix/upload-release-action@master
+      uses: Spikatrix/upload-release-action@test
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: .github/workflows/main.yml
